@@ -29,7 +29,7 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-    s = sendgrid.Sendgrid(os.environ['SENDGRID_USERNAME'], os.environ['SENDGRID_PW'], secure=True)
+    s = sendgrid.Sendgrid(os.environ['SENDGRID_USERNAME'], os.environ['SENDGRID_KEY'], secure=True)
     message = sendgrid.Message(addr_from=args.sender, subject=args.subject, text=args.message)
     for addr in args.emails:
         message.add_to(addr)
