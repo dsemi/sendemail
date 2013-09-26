@@ -11,7 +11,7 @@ def parse_arguments():
                         help="File(s) to be attached to the email, space separated",
                         nargs="+",
                         default="")
-    parser.add_argument("-f, --sender",
+    parser.add_argument("-f", "--sender",
                         help="The email address to send from",
                         required=True)
     parser.add_argument("-s", "--subject",
